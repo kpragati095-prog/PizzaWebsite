@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin: 20px 20px;
+}
+
+.logo h1{
+    font-size: 20px;
+    font-family: cursive;
+    color: rebeccapurple;
+    border-radius: 5px;
+    border-bottom: 2px solid red;
+    border-bottom-right-radius: 2rem;
+    width: 11rem;
+}
+
+ul a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px;
+    
+    color:yellow;
+    
+    
+}
+ul a:hover{
+    color:blue;
+    border-bottom: 1px solid black ;
+
+}
+
+.login button{
+    padding: 10px;
+}
+
+.about-sec{
+    display: flex;
+
+    color:rgb(17, 17, 17);
+    text-align: center;
+  margin: 5rem 5rem;
+     margin-top: 5rem ;
+     height: 20rem;
+}
+.container1{
+    background-color: red;
+    text-align: center;
+}
+
+.left-about{
+    margin-top: 8rem;
+    background-color: #f6a525;
+    height: 13rem;
+    padding: 40px 50px 70px;
+    
+    
+    
+}
+.left-about h1{
+    font-size: 34px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.left-about p{
+   
+    text-align: center;
+    text-align-last: center;
+    
+
+    
+    
+}
+.right-about img{
+    height: 23rem;
+}
+.menu-section{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.menu-section h1{
+    text-align: center;
+    color: chartreuse;
+}
+.menu-items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.menu-item{
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.menu-item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.menu-item h3{
+    color: coral;
+    margin-top: 15px;
+
+}
+.menu-item p{
+    font-size: 14px;
+    color: #555;
+}
+.menu-item .price{
+    font-weight: bold;
+    margin-top: 10px;
+    color: cornflowerblue;
+}
+
+
+.form-content{
+    background-image: url(reservation.jpg);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px 25px;
+    width: 100%;
+    border-radius: 8px;
+  
+
+}
+.form-content h2{
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+
+}
+.form-content input,
+.form-content textarea{
+    width: 40%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 40rem;
+}
+.form-content button{
+    width: 40%;
+    padding: 10px;
+    background: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 40rem;
+}
+.form-content button:hover{
+    color:chartreuse;
+    background-color:blueviolet;
+}
+.gallery-section{
+    margin: 30px;
+    text-align: center;
+    color: darkred;
+}
+.footer{
+    background-color: #f6a525;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 30px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    
+}
+.left-footer{
+    margin-left: 20px;
+    
+    width: 22rem;
+    margin-top: 2rem;
+    line-height: 20px;
+    
+}
+
+.left-footer p{
+    line-height: 20px;
+}
+
+.left-footer h3{
+    letter-spacing: 10px;
+    font-family: cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #033575;
+    margin-bottom: 20px;
+}
+.right-footer{
+margin-top: 2rem;
+margin-right: 20px;
+
+
+
+}
+
+.right-footer i{
+    display: flex;
+    gap: 20px;
+}
+.right-footer H3{
+    font-family: cursive;
+    font-size: 2rem;
+    color:darkviolet;
+    margin-bottom: 20px;
+}
+.right-footer p{
+    line-height: 20px;
+}
+
+

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            margin: 20px 20px;
+        }
+
+        .logo h1 {
+            font-size: 20px;
+            font-family: cursive;
+            color: rebeccapurple;
+            border-radius: 5px;
+            border-bottom: 2px solid red;
+            border-bottom-right-radius: 2rem;
+            width: 11rem;
+        }
+
+        ul a {
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 5px;
+
+            color:darkblue;
+
+
+        }
+
+        ul a:hover {
+            color: blue;
+            border-bottom: 1px solid black;
+
+        }
+
+        .contact-form {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px 40px;
+            width: 300px;
+            text-align: center;
+            margin-left:30rem ;
+             
+            
+        }
+
+        .contact-form h1 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            color: fuchsia;
+
+        }
+
+        .booking-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+
+        }
+
+        .booking-form input::placeholder {
+            color: #ccc;
+        }
+
+        .date-time {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        .date-time input {
+            width: 48%;
+
+        }
+
+        button {
+            width: 100%;
+            padding: 4px;
+            background-color: aqua;
+            color: black;
+            border: none;
+            margin-top: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #f6a525;
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 30px;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: medium;
+
+        }
+
+        .left-footer {
+            margin-left: 20px;
+
+            width: 22rem;
+            margin-top: 2rem;
+            line-height: 20px;
+
+        }
+
+        .left-footer p {
+            line-height: 20px;
+        }
+
+        .left-footer h3 {
+            letter-spacing: 10px;
+            font-family: cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #033575;
+            margin-bottom: 20px;
+        }
+
+        .right-footer {
+            margin-top: 2rem;
+            margin-right: 20px;
+
+
+
+        }
+
+        .right-footer i {
+            display: flex;
+            gap: 20px;
+        }
+
+        .right-footer H3 {
+            font-family: cursive;
+            font-size: 2rem;
+            color: darkviolet;
+            margin-bottom: 20px;
+        }
+
+        .right-footer p {
+            line-height: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container1">
+        <nav>
+            <div class="logo">
+                <h1>jamshedpur food</h1>
+            </div>
+
+            <ul>
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">menu</a>
+                <a href="#">gallery</a>
+                <a href="#"> reservation</a>
+                <a href="#">contact</a>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="contact-form">
+
+
+        <h1 id="heading">Table booking form</h1>
+        <form action="" class="booking-form">
+            <input type="text" placeholder="ENTER YOUR NAME" required>
+            <input type="email" placeholder="ENTER YOUR email" required>
+            <input type="tel" placeholder="Phone NUMBER" required>
+            <div class="date-time">
+                <input type="DATE" required>
+                <input type="TIME" required>
+
+
+            </div>
+            <input type="number" placeholder="No of audience" min="1" required>
+            <input type="number" placeholder="No of children" min="0" required>
+            <button type="submit"> Reserve a table</button>
+
+
+
+
+
+        </form>
+
+
+
+    </div>
+    <div class="footer">
+        <div class="left-footer">
+            <h3>About us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ducimus consectetur nobis minus
+                cupiditate explicabo modi quisquam tempore corrupti nostrum.</p>
+            <div class="workinghours">
+
+            </div>
+
+
+        </div>
+        <div class="right-footer">
+            <h3>Contact US</h3>
+            <i class="fa-solid fa-phone"></i>
+            <p>1010 Market Street, San Francisco, California, 91107</p>
+            <i class="fa-solid fa-message"></i>
+            <p>(415) 456 7800</p>
+            <i class="fa-solid fa-location-dot"></i>
+            <p>info@butazzopizza.net</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

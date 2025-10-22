@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>About Pizzon</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .hero-about {
+      background-image: url('hero-about.webp');
+      height: 60vh;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    #hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff8dc;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 600px;
+      margin-top: 20rem;
+    }
+
+    #hero-content h1 {
+      font-size: 3rem;
+
+    }
+
+    #hero-content p {
+      font-size: 1.2rem;
+    }
+
+    /* About Section */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 4rem 5%;
+      background-color: #fff;
+    }
+
+    .left-about {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left-about h3 {
+      font-size: 2.5rem;
+      color: red;
+      font-family: cursive;
+      margin-bottom: 0.5rem;
+    }
+
+    .left-about h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .left-about p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .left-content h2 {
+      color: red;
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .left-content2 h2 {
+      color: red;
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .left-content2 p,
+    .left-content2 h1 {
+      margin-top: 1rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .left-down-img img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .left-down {
+      margin-top: 1.5rem;
+    }
+
+    .left-down h2 {
+      color: red;
+      font-size: 1.5rem;
+    }
+
+    .right-about {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .right-about img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-about {
+        height: auto;
+        padding: 4rem 1rem;
+      }
+
+      #hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .about-section {
+        flex-direction: column;
+      }
+    }
+
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-header {
+      color: #e63946;
+      font-weight: 700;
+      margin-bottom: 10px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header::after {
+      content: "";
+      display: inline-block;
+      width: 40px;
+      height: 2px;
+      background: #e63946;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 40px;
+      color: #111;
+    }
+
+    .features {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .feature-box {
+      flex: 1 1 200px;
+      background: #fff7e6;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      color: #e63946;
+      margin-bottom: 15px;
+    }
+
+    .feature-title {
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .feature-desc {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .pizza-image {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 150px;
+      transform: rotate(20deg);
+    }
+
+    .section {
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .pizza-image {
+        display: none;
+      }
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      margin: 20px 20px;
+    }
+
+    .logo h1 {
+      font-size: 20px;
+      font-family: cursive;
+      color: rebeccapurple;
+      border-radius: 5px;
+      border-bottom: 2px solid red;
+      border-bottom-right-radius: 2rem;
+      width: 11rem;
+    }
+
+    ul a {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 5px;
+
+      color: yellow;
+
+
+    }
+
+    ul a:hover {
+      color: blue;
+      border-bottom: 1px solid black;
+
+    }
+
+    .login button {
+      padding: 10px;
+    }
+
+    .section-heading .sub-heading {
+      color: red;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .section-heading h2 {
+      font-size: 4rem;
+      color: black;
+      font-weight: 20px;
+    }
+
+    .footer-section {
+      background-color: #fff;
+
+    }
+
+    .footer-menu li {
+      padding: 1rem;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .footer-section h6 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .footer-menu li:hover {
+      color: red;
+
+    }
+
+    .Testimonials {
+      margin-top: 3rem;
+      text-align: center;
+      display: flex;
+      gap: 30px ;
+      
+    }
+
+    .Testimonials h3,
+    h1 {
+      text-align: center;
+      font-size: 30px;
+
+
+    }
+
+    .Testimonials h3 {
+      margin-bottom: 30px;
+    }
+
+    .Testimonials .clint-box {
+      border: 1px solid rgb(88, 85, 85);
+
+      width: 20rem;
+      padding: 40px;
+      box-shadow: 4px 8px 5px 2px rgba(0, 0, 0, 0.6);
+    }
+
+    .clint-box img {
+      text-align: center;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    #icons i {
+      color: yellow;
+    }
+    .footer{
+    background-color: #f6a525;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 30px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    
+}
+.left-footer{
+    margin-left: 20px;
+    
+    width: 22rem;
+    margin-top: 2rem;
+    line-height: 20px;
+    
+}
+
+.left-footer p{
+    line-height: 20px;
+}
+
+.left-footer h3{
+    letter-spacing: 10px;
+    font-family: cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #033575;
+    margin-bottom: 20px;
+}
+.right-footer{
+margin-top: 2rem;
+margin-right: 20px;
+
+
+
+}
+
+.right-footer i{
+    display: flex;
+    gap: 20px;
+}
+.right-footer H3{
+    font-family: cursive;
+    font-size: 2rem;
+    color:darkviolet;
+    margin-bottom: 20px;
+}
+.right-footer p{
+    line-height: 20px;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container1">
+    <nav>
+      <div class="logo">
+        <h1>jamshedpur food</h1>
+      </div>
+
+      <ul>
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">menu</a>
+        <a href="#">gallery</a>
+        <a href="#"> reservation</a>
+        <a href="#">contact</a>
+
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-about">
+    <div id="hero-content">
+      <h1>About</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio dolorem expedita modi explicabo nobis corrupti
+        vitae est accusantium fugiat eius?</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="about-section">
+    <div class="left-about">
+      <h3>Our Story</h3>
+      <h1>The Story About Pizzon</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
+
+      <div class="left-content">
+        <h2>Our Family Name</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sapiente error consequatur in impedit adipisci
+          possimus facilis excepturi illo, accusamus temporibus aliquam cumque tempora. Suscipit dolorem velit sint
+          voluptas labore.</p>
+      </div>
+
+      <div class="left-content2">
+        <h2>Our Journey</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sed nulla ipsa. Consequuntur iusto qui sit
+          consectetur rerum mollitia laborum non vitae porro. Modi deserunt, molestias dolorem sunt inventore iusto!</p>
+      </div>
+
+      <div class="left-down-img">
+        <img src="abt-img-1.jpg" alt="Our kitchen or team">
+      </div>
+
+      <div class="left-down">
+        <h2>Food and Fun</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo asperiores eveniet vero est porro veniam unde
+          praesentium accusamus nam eos culpa nihil excepturi, accusantium possimus illo? Accusamus voluptatum iusto
+          deleniti!</p>
+      </div>
+    </div>
+
+    <div class="right-about">
+      <img src="abt-img-2.jpg" alt="Restaurant or people enjoying food">
+    </div>
+  </div>
+
+
+  <div class="container section">
+    
+    <div class="section-header">Our Strength</div>
+    <div class="title">Why We Are The Best?</div>
+    <div class="features">
+      <div class="feature-box">
+        <div class="feature-icon">🍚</div>
+        <div class="feature-title">All kinds of Foods</div>
+        <div class="feature-desc">
+          Lorem Ipsum is simply dummy text of the printing and type setting industry.
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">🌸</div>
+        <div class="feature-title">Fresh Foods</div>
+        <div class="feature-desc">
+          Lorem Ipsum is simply dummy text of the printing and type setting industry.
+        </div>
+      </div>
+      
+
+      <div class="feature-box">
+        <div class="feature-icon">😊</div>
+        <div class="feature-title">Best Taste</div>
+        <div class="feature-desc">
+          Lorem Ipsum is simply dummy text of the printing and type setting industry.
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon">📍</div>
+        <div class="feature-title">On Time Delivery</div>
+        <div class="feature-desc">
+          Lorem Ipsum is simply dummy text of the printing and type setting industry.
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <h3 style="text-align: center; margin-top: 3rem;"> Feedback</h3>
+  <h1>Client Testimonials</h1>
+  <div class="Testimonials">
+
+    <div class="clint-box">
+      <img src="client-1.jpg" alt="">
+      <h3>rahul singh</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus iste doloremque nulla officia totam natus
+        quod atque temporibus sapiente! Eligendi?</p>
+      <div id="icons">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    <div class="clint-box">
+      <img src="client-1.jpg" alt="">
+      <h3>rahul singh</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus iste doloremque nulla officia totam natus
+        quod atque temporibus sapiente! Eligendi?</p>
+      <div id="icons">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    <div class="clint-box">
+      <img src="client-1.jpg" alt="">
+      <h3>rahul singh</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus iste doloremque nulla officia totam natus
+        quod atque temporibus sapiente! Eligendi?</p>
+      <div id="icons">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    <div class="clint-box">
+      <img src="client-1.jpg" alt="">
+      <h3>rahul singh</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus iste doloremque nulla officia totam natus
+        quod atque temporibus sapiente! Eligendi?</p>
+      <div id="icons">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+
+
+
+    <div class="clint-box">
+      <img src="client-1.jpg" alt="">
+      <h3>rahul singh</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus iste doloremque nulla officia totam natus
+        quod atque temporibus sapiente! Eligendi?</p>
+      <div id="icons">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+        <div class="left-footer">
+            <h3>About us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ducimus consectetur nobis minus cupiditate explicabo modi quisquam tempore corrupti nostrum.</p>
+            <div class="workinghours">
+
+            </div>
+
+
+        </div>
+        <div class="right-footer">
+            <h3>Contact US</h3>
+            <i class="fa-solid fa-phone"></i>
+         <p>1010 Market Street, San Francisco, California, 91107</p>
+            <i class="fa-solid fa-message"></i>
+        <p>(415) 456 7800</p>
+            <i class="fa-solid fa-location-dot"></i>
+            <p>info@butazzopizza.net</p>
+        </div>
+    </div>
+  
+
+
+  
+</body>
+
+</html>
